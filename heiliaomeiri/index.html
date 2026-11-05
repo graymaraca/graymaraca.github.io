@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黑料每日大赛入口-每日黑料大赛入口导航_黑料大赛今日更新入口</title>
+<meta name="description" content="黑料每日大赛入口页面，汇总每日大赛入口的访问方式、更新节奏与常见问题说明，帮助你快速了解黑料每日大赛入口的入口分类与使用路径。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1115'/%3E%3Cpath d='M18 44 32 16l14 28h-7l-7-14-7 14z' fill='%23f5c518'/%3E%3Ccircle cx='32' cy='50' r='3' fill='%23f5c518'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0f1115;
+    --bg-soft:#151922;
+    --card:#1a1f2a;
+    --line:#262d3a;
+    --text:#e8ebf0;
+    --muted:#9aa4b5;
+    --accent:#f5c518;
+    --accent-soft:rgba(245,197,24,.12);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;}
+
+  /* 页头 */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(15,17,21,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-in{
+    display:flex;align-items:center;gap:24px;
+    min-height:68px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;letter-spacing:.3px;flex-shrink:0;}
+  .brand .mark{width:34px;height:34px;flex-shrink:0;}
+  nav.main{margin-left:auto;display:flex;gap:26px;font-size:14.5px;color:var(--muted);}
+  nav.main a{padding:6px 0;border-bottom:2px solid transparent;transition:.2s;}
+  nav.main a:hover,nav.main a:focus-visible{color:var(--accent);border-bottom-color:var(--accent);outline:none;}
+  .head-cta{
+    font-size:14px;padding:8px 16px;border-radius:8px;
+    background:var(--accent);color:#141414;font-weight:600;flex-shrink:0;
+    transition:.2s;
+  }
+  .head-cta:hover{filter:brightness(1.08);}
+  .menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:6px 10px;font-size:14px;}
+
+  /* 首屏 */
+  .hero{
+    position:relative;overflow:hidden;
+    border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(900px 380px at 82% -10%,rgba(245,197,24,.13),transparent 60%),
+      radial-gradient(700px 340px at 8% 110%,rgba(90,120,255,.10),transparent 60%),
+      var(--bg-soft);
+  }
+  .hero-in{display:grid;grid-template-columns:1.35fr .9fr;gap:48px;align-items:center;padding:64px 0 60px;}
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;letter-spacing:1px;color:var(--accent);
+    background:var(--accent-soft);border:1px solid rgba(245,197,24,.28);
+    padding:5px 12px;border-radius:999px;margin-bottom:20px;
+  }
+  .kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);}
+  h1{
+    font-size:clamp(28px,4.4vw,44px);
+    line-height:1.28;font-weight:800;letter-spacing:.5px;
+    margin:0 0 18px;
+  }
+  h1 .hl{color:var(--accent);}
+  .hero p.lead{
+    color:var(--muted);font-size:16px;max-width:34em;margin:0 0 28px;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+  .btn-primary{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--accent);color:#141414;font-weight:700;font-size:15px;
+    padding:13px 26px;border-radius:10px;transition:.2s;
+  }
+  .btn-primary:hover{filter:brightness(1.08);transform:translateY(-1px);}
+  .btn-ghost{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1px solid var(--line);color:var(--text);font-size:15px;
+    padding:12px 22px;border-radius:10px;transition:.2s;
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+  .hero-note{margin-top:18px;font-size:13px;color:#6f7a8c;}
+
+  .hero-visual{
+    background:linear-gradient(160deg,#1b2130,#12151c);
+    border:1px solid var(--line);border-radius:18px;
+    padding:22px;position:relative;
+  }
+  .hero-visual .vs-head{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--muted);margin-bottom:14px;}
+  .bar-row{display:flex;align-items:center;gap:12px;margin-bottom:12px;font-size:13px;}
+  .bar-row .name{width:66px;color:var(--muted);flex-shrink:0;}
+  .bar-track{flex:1;height:9px;background:#232a36;border-radius:99px;overflow:hidden;}
+  .bar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#f5c518,#e09a10);}
+  .bar-row .val{width:34px;text-align:right;color:var(--accent);font-variant-numeric:tabular-nums;}
+  .visual-foot{
+    margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);
+    font-size:12.5px;color:#6f7a8c;display:flex;justify-content:space-between;
+  }
+
+  /* 通用分区 */
+  section{padding:66px 0;}
+  section.alt{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sec-head{max-width:44em;margin-bottom:38px;}
+  .sec-head .tag{
+    font-size:12.5px;letter-spacing:1.6px;color:var(--accent);
+    text-transform:uppercase;font-weight:600;margin-bottom:10px;
+  }
+  h2{font-size:clamp(21px,2.6vw,27px);margin:0 0 12px;font-weight:750;line-height:1.35;}
+  .sec-head p{color:var(--muted);margin:0;font-size:15px;}
+
+  /* 入口卡片 */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:24px 22px;transition:.22s;display:flex;flex-direction:column;
+  }
+  .card:hover{border-color:rgba(245,197,24,.45);transform:translateY(-3px);}
+  .card .ico{width:40px;height:40px;border-radius:10px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+  .card h3{font-size:16.5px;margin:0 0 10px;font-weight:700;}
+  .card p{color:var(--muted);font-size:14.5px;margin:0 0 16px;flex:1;}
+  .card .go{font-size:13.5px;color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:6px;}
+  .card .go:hover{text-decoration:underline;}
+
+  /* 流程 */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:step;}
+  .step{
+    position:relative;padding:0 22px 0 0;
+  }
+  .step:last-child{padding-right:0;}
+  .step .num{
+    font-size:13px;font-weight:700;color:var(--accent);
+    border:1px solid rgba(245,197,24,.35);background:var(--accent-soft);
+    width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+    margin-bottom:14px;font-variant-numeric:tabular-nums;
+  }
+  .step h3{font-size:15.5px;margin:0 0 8px;font-weight:700;}
+  .step p{font-size:14px;color:var(--muted);margin:0;}
+  .step::after{
+    content:"";position:absolute;top:15px;right:6px;width:16px;height:1px;background:var(--line);
+  }
+  .step:last-child::after{display:none;}
+
+  /* 列表 / FAQ */
+  .faq{display:grid;gap:14px;}
+  details.item{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:18px 22px;
+  }
+  details.item[open]{border-color:rgba(245,197,24,.4);}
+  details.item summary{
+    cursor:pointer;font-weight:650;font-size:15.5px;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+  }
+  details.item summary::-webkit-details-marker{display:none;}
+  details.item summary .plus{color:var(--accent);font-size:18px;line-height:1;transition:.2s;flex-shrink:0;}
+  details.item[open] summary .plus{transform:rotate(45deg);}
+  details.item .ans{color:var(--muted);font-size:14.5px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);}
+
+  /* 说明表格 */
+  .facts{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:14px 40px;
+    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 28px;
+  }
+  .fact{display:flex;gap:14px;align-items:flex-start;border-bottom:1px dashed var(--line);padding-bottom:14px;}
+  .fact:last-child,.fact:nth-last-child(2){border-bottom:none;padding-bottom:0;}
+  .fact .k{color:var(--muted);font-size:14px;width:7.5em;flex-shrink:0;}
+  .fact .v{font-size:14.5px;font-weight:600;}
+
+  /* 收束 */
+  .closing{
+    background:linear-gradient(135deg,#1b2130,#12151c);
+    border:1px solid var(--line);border-radius:18px;
+    padding:44px 40px;display:flex;gap:36px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  }
+  .closing h2{margin:0 0 10px;}
+  .closing p{color:var(--muted);margin:0;font-size:15px;max-width:40em;}
+
+  /* 页尾 */
+  footer.site{
+    border-top:1px solid var(--line);background:#0b0d11;
+    padding:40px 0 32px;font-size:13.5px;color:#6f7a8c;
+  }
+  .foot-in{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text);font-size:15px;margin-bottom:10px;}
+  .foot-brand .mark{width:26px;height:26px;}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap;}
+  .foot-links a:hover{color:var(--accent);}
+  .foot-bottom{margin-top:26px;padding-top:18px;border-top:1px solid #1b2029;font-size:12.5px;color:#57606f;}
+
+  @media (max-width:900px){
+    .hero-in{grid-template-columns:1fr;gap:34px;padding:46px 0 44px;}
+    .hero-visual{max-width:460px;}
+    .grid-3{grid-template-columns:1fr 1fr;}
+    .steps{grid-template-columns:1fr 1fr;gap:28px 0;}
+    .step:nth-child(2)::after{display:none;}
+    .facts{grid-template-columns:1fr;}
+    .fact:nth-last-child(2){border-bottom:1px dashed var(--line);padding-bottom:14px;}
+  }
+  @media (max-width:680px){
+    nav.main{
+      display:none;position:absolute;left:0;right:0;top:68px;
+      flex-direction:column;gap:0;background:#11141b;border-bottom:1px solid var(--line);
+      padding:8px 20px 16px;
+    }
+    nav.main.open{display:flex;}
+    nav.main a{padding:12px 0;border-bottom:1px solid var(--line);}
+    .menu-toggle{display:inline-block;margin-left:auto;}
+    .head-cta{display:none;}
+    .grid-3{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr;gap:26px;}
+    .step{padding-right:0;}
+    .step::after{display:none;}
+    section{padding:52px 0;}
+    .closing{padding:32px 24px;}
+    h1{font-size:27px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap head-in">
+    <a class="brand" href="#top" aria-label="黑料每日大赛入口 首页">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1a1f2a"/>
+        <path d="M18 44 32 16l14 28h-7l-7-14-7 14z" fill="#f5c518"/>
+        <circle cx="32" cy="50" r="3" fill="#f5c518"/>
+      </svg>
+      <span>黑料每日大赛入口</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">导航</button>
+    <nav class="main" id="mainNav">
+      <a href="#entry">入口分类</a>
+      <a href="#flow">进入步骤</a>
+      <a href="#status">更新说明</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="head-cta" href="#entry">查看入口</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <div class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <span class="kicker"><span class="dot"></span>每日更新 · 入口导航</span>
+        <h1>黑料每日大赛入口</h1>
+        <p class="lead">这里是黑料每日大赛入口的主题首页，把每日大赛入口的常见访问方式、进入步骤与更新节奏集中整理在一处。第一次接触的朋友，可以先看入口分类，再按步骤进入，减少反复查找的时间。</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#entry">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" fill="none" stroke="#141414" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            前往入口分类
+          </a>
+          <a class="btn-ghost" href="#flow">了解进入步骤</a>
+        </div>
+        <p class="hero-note">页面只做入口信息整理与说明，具体页面内容以实际打开结果为准。</p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="vs-head"><span>每日入口概览</span><span>示意</span></div>
+        <div class="bar-row"><span class="name">主入口</span><span class="bar-track"><span class="bar-fill" style="width:92%"></span></span><span class="val">92</span></div>
+        <div class="bar-row"><span class="name">备用线</span><span class="bar-track"><span class="bar-fill" style="width:76%"></span></span><span class="val">76</span></div>
+        <div class="bar-row"><span class="name">移动端</span><span class="bar-track"><span class="bar-fill" style="width:84%"></span></span><span class="val">84</span></div>
+        <div class="bar-row"><span class="name">镜像页</span><span class="bar-track"><span class="bar-fill" style="width:61%"></span></span><span class="val">61</span></div>
+        <div class="visual-foot"><span>每日大赛更新</span><span>按日整理</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 入口分类 -->
+  <section id="entry">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">Entry</div>
+        <h2>黑料每日大赛入口的几类常见访问方式</h2>
+        <p>同一个黑料每日大赛入口，在不同设备与网络环境下可能有不同表现。下面按使用场景拆成三类，方便对照自己的情况选择。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="ico">
+            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="4" width="16" height="11" rx="2" fill="none" stroke="#f5c518" stroke-width="1.6"/><path d="M7 18h6" stroke="#f5c518" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>桌面端主入口</h3>
+          <p>在电脑浏览器中直接打开主入口，页面加载完整，适合长时间浏览与逐条查看每日大赛内容，也是多数人首先尝试的方式。</p>
+          <a class="go" href="#flow">查看打开步骤 →</a>
+        </article>
+        <article class="card">
+          <div class="ico">
+            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="2" width="10" height="16" rx="2.4" fill="none" stroke="#f5c518" stroke-width="1.6"/><circle cx="10" cy="15" r="1" fill="#f5c518"/></svg>
+          </div>
+          <h3>移动端入口</h3>
+          <p>手机访问时优先使用竖屏布局，导航收进顶部菜单。若页面显示异常，可先切换浏览器或清空缓存，再重新打开黑料每日大赛入口。</p>
+          <a class="go" href="#status">了解兼容说明 →</a>
+        </article>
+        <article class="card">
+          <div class="ico">
+            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="#f5c518" stroke-width="1.6"/><path d="M10 6v4l3 2" fill="none" stroke="#f5c518" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>备用与镜像</h3>
+          <p>主入口短时无法打开时，可按页面给出的备用方式尝试。备用线并非长期固定，实际可用情况以当日页面显示为准。</p>
+          <a class="go" href="#faq">查看常见问题 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 进入步骤 -->
+  <section class="alt" id="flow">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">Steps</div>
+        <h2>从打开到进入：四步走完黑料每日大赛入口</h2>
+        <p>流程本身不复杂，关键在于顺序。按下面四步操作，能减少因为跳转或缓存导致的反复尝试。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">01</div>
+          <h3>确认访问环境</h3>
+          <p>使用较新版本的浏览器，关闭可能拦截跳转的插件或广告过滤，保证打开黑料每日大赛入口时页面能正常加载。</p>
+        </div>
+        <div class="step">
+          <div class="num">02</div>
+          <h3>从首页入口进入</h3>
+          <p>在本页首屏或入口分类区选择对应设备的方式，点击后进入每日大赛页面，无需额外注册即可查看公开内容。</p>
+        </div>
+        <div class="step">
+          <div class="num">03</div>
+          <h3>按日期查看</h3>
+          <p>每日大赛以日期为线索更新，进入后先看当日条目，再回看往期，能更清楚地了解更新内容与发布节奏。</p>
+        </div>
+        <div class="step">
+          <div class="num">04</div>
+          <h3>异常时换通道</h3>
+          <p>如果页面长时间空白，先刷新或换浏览器；仍无法打开时，再尝试备用入口，避免在单一地址上反复等待。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 更新说明 -->
+  <section id="status">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">Status</div>
+        <h2>关于每日大赛入口更新的几点说明</h2>
+        <p>入口的可用性会随网络与维护情况变化。这里把可以确认的信息与需要以实际页面为准的部分分开说明。</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><span class="k">更新节奏</span><span class="v">按日整理，每日大赛内容以当日为准</span></div>
+        <div class="fact"><span class="k">入口数量</span><span class="v">主入口 + 备用线，具体以页面显示为准</span></div>
+        <div class="fact"><span class="k">适用设备</span><span class="v">桌面浏览器与移动端浏览器</span></div>
+        <div class="fact"><span class="k">访问门槛</span><span class="v">公开查看，无需注册账号</span></div>
+        <div class="fact"><span class="k">页面性质</span><span class="v">入口导航与说明，不托管内容</span></div>
+        <div class="fact"><span class="k">异常处理</span><span class="v">刷新、换浏览器、改用备用入口</span></div>
+      </div>
+      <p style="color:var(--muted);font-size:14.5px;margin:22px 0 0;max-width:52em;">需要说明的是，本页只负责把黑料每日大赛入口的访问路径讲清楚，不承诺任何固定地址长期有效。遇到页面结构变化或临时维护，以实际打开的结果为准；如果对更新有疑问，可先参考下方的常见问题。</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="alt" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">FAQ</div>
+        <h2>黑料每日大赛入口常见问题</h2>
+        <p>整理访问过程中最容易遇到的几个问题，按顺序查看基本能自己解决。</p>
+      </div>
+      <div class="faq">
+        <details class="item" open>
+          <summary>黑料每日大赛入口在哪里可以找到？<span class="plus">+</span></summary>
+          <div class="ans">本页首屏与入口分类区都提供了指向入口的按钮，按设备类型选择即可。建议把本页加入书签，后续查找更省事。</div>
+        </details>
+        <details class="item">
+          <summary>手机上打开显示不全怎么办？<span class="plus">+</span></summary>
+          <div class="ans">先确认浏览器为较新版本，再尝试清除缓存或切换网络。移动端页面以竖屏浏览为主，横屏时部分区域可能需要滑动查看。</div>
+        </details>
+        <details class="item">
+          <summary>每日大赛的内容多久更新一次？<span class="plus">+</span></summary>
+          <div class="ans">按照页面说明，黑料每日大赛入口相关内容按日整理。具体条目数量与发布时间以实际页面为准，不建议以固定时间点作为唯一判断依据。</div>
+        </details>
+        <details class="item">
+          <summary>备用入口和主入口有区别吗？<span class="plus">+</span></summary>
+          <div class="ans">两者指向同类内容，主要区别在于访问线路。主入口通常优先推荐，备用线用于主入口短时不可用的情况，可用性随网络环境变化。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 收束 -->
+  <section>
+    <div class="wrap">
+      <div class="closing">
+        <div>
+          <h2>现在就可以从黑料每日大赛入口开始</h2>
+          <p>先看入口分类，再按四步流程操作；遇到异常时回到本页换一条通道。黑料每日大赛入口的说明集中在这里，方便随时回看。</p>
+        </div>
+        <a class="btn-primary" href="#entry">回到入口分类</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <div class="foot-brand">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1a1f2a"/>
+            <path d="M18 44 32 16l14 28h-7l-7-14-7 14z" fill="#f5c518"/>
+            <circle cx="32" cy="50" r="3" fill="#f5c518"/>
+          </svg>
+          <span>黑料每日大赛入口</span>
+        </div>
+        <p style="margin:0;max-width:32em;">提供每日大赛入口的访问说明与路径整理，页面内容仅为导航与使用参考。</p>
+      </div>
+      <div class="foot-links">
+        <a href="#entry">入口分类</a>
+        <a href="#flow">进入步骤</a>
+        <a href="#status">更新说明</a>
+        <a href="#faq">常见问题</a>
+      </div>
+    </div>
+    <div class="foot-bottom">© 黑料每日大赛入口 · 本页为入口信息整理页面，具体内容以实际打开为准。</div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var t=document.getElementById('menuToggle'),n=document.getElementById('mainNav');
+    t.addEventListener('click',function(){
+      var open=n.classList.toggle('open');
+      t.setAttribute('aria-expanded',open?'true':'false');
+    });
+    n.addEventListener('click',function(e){
+      if(e.target.tagName==='A'){n.classList.remove('open');t.setAttribute('aria-expanded','false');}
+    });
+  })();
+</script>
+</body>
+</html>
