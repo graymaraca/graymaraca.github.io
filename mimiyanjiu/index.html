@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秘密研究所最新地址发布页-秘密研究所地址发布_最新地址查询与访问指引</title>
+<meta name="description" content="秘密研究所最新地址发布页，集中说明地址发布页的用途、核对方法、常见访问问题与更新记录，帮助访客快速找到当前有效入口与备用线索。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1b2d'/%3E%3Ccircle cx='32' cy='28' r='12' fill='none' stroke='%234fd1c5' stroke-width='4'/%3E%3Cpath d='M24 44h16v10H24z' fill='%234fd1c5'/%3E%3Ccircle cx='32' cy='28' r='4' fill='%234fd1c5'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#0f1b2d;
+    --ink-2:#1b2c44;
+    --paper:#f4f6f9;
+    --card:#ffffff;
+    --line:#dde4ec;
+    --teal:#0e8f84;
+    --teal-soft:#e2f4f1;
+    --amber:#b4711a;
+    --amber-soft:#fdf2e1;
+    --text:#22303f;
+    --muted:#5d6b7a;
+    --radius:14px;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--text);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,-apple-system,sans-serif;
+    line-height:1.75;
+    font-size:16px;
+  }
+  a{color:var(--teal);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+  /* 页头 */
+  header.site{
+    background:var(--ink);
+    color:#e8eef6;
+    position:sticky;
+    top:0;
+    z-index:50;
+    box-shadow:0 2px 10px rgba(15,27,45,.22);
+  }
+  .bar{
+    display:flex;align-items:center;gap:18px;
+    min-height:66px;flex-wrap:wrap;
+    padding-top:10px;padding-bottom:10px;
+  }
+  .logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+  .logo svg{display:block}
+  .logo .brand{
+    font-size:18px;font-weight:700;letter-spacing:.5px;color:#fff;
+    line-height:1.3;
+  }
+  nav.main{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+  nav.main a{
+    color:#c6d3e2;font-size:14.5px;padding:6px 11px;border-radius:8px;
+    text-decoration:none;white-space:nowrap;
+  }
+  nav.main a:hover{background:rgba(79,209,197,.14);color:#fff;text-decoration:none}
+
+  /* 首屏 */
+  .hero{
+    background:linear-gradient(160deg,#0f1b2d 0%,#16304a 58%,#0e6f68 100%);
+    color:#eaf2f8;
+    padding:52px 0 46px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;right:-90px;top:-90px;width:340px;height:340px;
+    border-radius:50%;
+    border:1px solid rgba(79,209,197,.28);
+    pointer-events:none;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;right:20px;bottom:-140px;width:260px;height:260px;
+    border-radius:50%;
+    border:1px dashed rgba(79,209,197,.2);
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative;z-index:1}
+  .tagline{
+    display:inline-block;font-size:13px;letter-spacing:2px;
+    color:#8fe2d8;border:1px solid rgba(143,226,216,.45);
+    padding:3px 12px;border-radius:999px;margin-bottom:18px;
+  }
+  h1{
+    font-size:34px;line-height:1.35;margin:0 0 16px;
+    font-weight:800;letter-spacing:.5px;color:#fff;
+    max-width:18em;
+  }
+  .hero p.lead{
+    margin:0 0 26px;color:#c3d3e2;font-size:16.5px;max-width:40em;
+  }
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn{
+    display:inline-block;padding:11px 24px;border-radius:10px;
+    font-size:15.5px;font-weight:600;text-decoration:none;
+    transition:transform .15s ease,background .15s ease;
+  }
+  .btn-primary{background:#4fd1c5;color:#0c2321}
+  .btn-primary:hover{background:#6ee0d5;text-decoration:none}
+  .btn-ghost{border:1px solid rgba(198,211,226,.5);color:#dce7f2}
+  .btn-ghost:hover{background:rgba(255,255,255,.08);text-decoration:none}
+  .hero-meta{
+    margin-top:26px;display:flex;gap:26px;flex-wrap:wrap;
+    font-size:14px;color:#9fb3c7;
+  }
+  .hero-meta strong{color:#eaf2f8;font-weight:600}
+
+  /* 主区域 */
+  main{padding:44px 0 20px}
+  section{margin-bottom:48px}
+  h2{
+    font-size:23px;line-height:1.4;margin:0 0 8px;
+    color:var(--ink);font-weight:800;
+  }
+  .sec-note{color:var(--muted);font-size:14.5px;margin:0 0 22px;max-width:46em}
+  p{margin:0 0 14px}
+  .prose{max-width:44em}
+
+  /* 状态卡 */
+  .status{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
+  }
+  .status .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 20px;
+  }
+  .status .card .k{font-size:13px;color:var(--muted);letter-spacing:.5px}
+  .status .card .v{font-size:17px;font-weight:700;color:var(--ink);margin-top:4px}
+  .status .card .d{font-size:13.5px;color:var(--muted);margin-top:6px}
+  .pill{
+    display:inline-block;font-size:12.5px;padding:2px 10px;border-radius:999px;
+    font-weight:600;vertical-align:middle;
+  }
+  .pill-ok{background:var(--teal-soft);color:#0a6b62}
+  .pill-wait{background:var(--amber-soft);color:var(--amber)}
+
+  /* 查询区 */
+  .finder{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 22px 20px;
+  }
+  .finder-row{display:flex;gap:10px;flex-wrap:wrap}
+  .finder input[type=search]{
+    flex:1 1 260px;min-width:0;padding:11px 14px;font-size:15px;
+    border:1px solid #c9d4e0;border-radius:10px;background:#fbfcfe;color:var(--text);
+    font-family:inherit;
+  }
+  .finder input[type=search]:focus{
+    outline:2px solid rgba(14,143,132,.35);border-color:var(--teal);
+  }
+  .finder button{
+    padding:11px 22px;font-size:15px;font-weight:600;border:none;border-radius:10px;
+    background:var(--ink);color:#fff;cursor:pointer;font-family:inherit;
+  }
+  .finder button:hover{background:var(--ink-2)}
+  .finder .hint{font-size:13px;color:var(--muted);margin-top:12px}
+  #finder-result{
+    margin-top:16px;font-size:14.5px;color:var(--ink);
+    background:var(--teal-soft);border-radius:10px;padding:12px 15px;display:none;
+  }
+  #finder-result.show{display:block}
+  #finder-result .none{background:var(--amber-soft);color:#8a5713;border-radius:8px;padding:10px 12px;display:block}
+
+  /* 步骤 */
+  .steps{counter-reset:step;display:grid;gap:14px}
+  .step{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 20px 16px 62px;position:relative;
+  }
+  .step::before{
+    counter-increment:step;content:counter(step);
+    position:absolute;left:20px;top:18px;width:28px;height:28px;
+    border-radius:50%;background:var(--ink);color:#4fd1c5;
+    font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;
+  }
+  .step h3{margin:0 0 6px;font-size:16.5px;color:var(--ink)}
+  .step p{margin:0;font-size:14.5px;color:#3b4a5a}
+
+  /* 卡片网格 */
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:16px;
+  }
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 20px 18px;
+  }
+  .card h3{margin:0 0 8px;font-size:16.5px;color:var(--ink);display:flex;align-items:center;gap:8px}
+  .card p{font-size:14.5px;color:#3b4a5a;margin:0 0 10px}
+  .card p:last-child{margin-bottom:0}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);flex-shrink:0}
+  .dot.amber{background:var(--amber)}
+
+  /* 记录表 */
+  .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line)}
+  th{background:#eef2f7;color:var(--ink);font-weight:700;font-size:13.5px;letter-spacing:.5px}
+  tr:last-child td{border-bottom:none}
+  td .pill{font-size:12px}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13.5px;color:#3b4a5a}
+
+  /* 问答 */
+  details{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px 20px;margin-bottom:12px;
+  }
+  details summary{
+    cursor:pointer;font-weight:700;color:var(--ink);font-size:15.5px;
+    list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;
+  }
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+";color:var(--teal);font-weight:700;font-size:19px;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{margin:12px 0 0;font-size:14.5px;color:#3b4a5a}
+
+  /* 下载区 */
+  .download{
+    background:var(--ink);color:#dfe9f2;border-radius:var(--radius);
+    padding:28px 26px;display:flex;gap:22px;align-items:center;flex-wrap:wrap;
+  }
+  .download .txt{flex:1 1 320px;min-width:0}
+  .download h2{color:#fff;margin-bottom:6px;font-size:21px}
+  .download p{margin:0;font-size:14.5px;color:#b6c7d8}
+  .btn-disabled{
+    background:#31465f;color:#9fb3c7;cursor:not-allowed;
+    pointer-events:none;text-decoration:none;display:inline-block;
+    padding:11px 26px;border-radius:10px;font-weight:600;font-size:15.5px;
+  }
+
+  /* 页尾 */
+  footer.site{
+    background:#0c1523;color:#93a6ba;padding:34px 0 28px;font-size:14px;
+    margin-top:16px;
+  }
+  footer.site .f-top{
+    display:flex;gap:24px;flex-wrap:wrap;justify-content:space-between;
+    padding-bottom:20px;border-bottom:1px solid rgba(147,166,186,.18);margin-bottom:18px;
+  }
+  footer.site .f-brand{font-weight:700;color:#e3ecf5;font-size:16px;margin-bottom:6px}
+  footer.site nav{display:flex;gap:18px;flex-wrap:wrap}
+  footer.site nav a{color:#a9bccd;font-size:14px}
+  footer.site nav a:hover{color:#fff;text-decoration:none}
+  footer.site .f-bottom{font-size:13px;color:#7b8ea3;line-height:1.8}
+
+  @media (max-width:720px){
+    h1{font-size:26px}
+    .hero{padding:38px 0 34px}
+    .hero p.lead{font-size:15.5px}
+    h2{font-size:20px}
+    nav.main{width:100%;margin-left:0;overflow-x:auto;padding-bottom:2px}
+    nav.main a{font-size:14px;padding:6px 9px}
+    .bar{gap:10px}
+    .logo .brand{font-size:16px}
+    .step{padding-left:56px}
+    .step::before{left:16px}
+    .hero-meta{gap:16px;font-size:13px}
+    main{padding-top:32px}
+    section{margin-bottom:38px}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <div class="logo">
+      <svg width="38" height="38" viewBox="0 0 64 64" role="img" aria-label="秘密研究所标记">
+        <rect width="64" height="64" rx="14" fill="#16304a"/>
+        <circle cx="32" cy="27" r="11" fill="none" stroke="#4fd1c5" stroke-width="4"/>
+        <circle cx="32" cy="27" r="4" fill="#4fd1c5"/>
+        <path d="M24 43h16v9H24z" fill="#4fd1c5"/>
+        <path d="M18 52h28" stroke="#4fd1c5" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="brand">秘密研究所最新地址发布页</span>
+    </div>
+    <nav class="main" aria-label="主导航">
+      <a href="#status">发布页状态</a>
+      <a href="#finder">地址查询</a>
+      <a href="#howto">核对方法</a>
+      <a href="#record">更新记录</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="tagline">地址发布 · 访问指引</span>
+    <h1>秘密研究所最新地址发布页</h1>
+    <p class="lead">
+      这里集中说明秘密研究所最新地址发布页的用途与使用方式：如何确认当前发布页状态、如何按步骤核对地址线索、遇到访问异常时该先排查什么。页面只承载发布与核对信息，不代替任何第三方服务作承诺。
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#finder">开始查询地址</a>
+      <a class="btn btn-ghost" href="#howto">查看核对方法</a>
+    </div>
+    <div class="hero-meta">
+      <span>页面类型：<strong>地址发布页</strong></span>
+      <span>维护方式：<strong>按更新记录同步</strong></span>
+      <span>适用对象：<strong>需要确认入口的访客</strong></span>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="status" aria-labelledby="status-title">
+    <h2 id="status-title">发布页状态一览</h2>
+    <p class="sec-note">先看清发布页本身的状态，再判断地址线索是否可采信。以下为本站发布页的维护口径。</p>
+    <div class="status">
+      <div class="card">
+        <div class="k">发布页状态</div>
+        <div class="v"><span class="pill pill-ok">正常发布</span></div>
+        <div class="d">本页作为地址发布页持续可访问，内容随更新记录调整。</div>
+      </div>
+      <div class="card">
+        <div class="k">地址线索形式</div>
+        <div class="v">以发布页记录为准</div>
+        <div class="d">地址只通过发布页与更新记录呈现，不通过其他渠道单独下发。</div>
+      </div>
+      <div class="card">
+        <div class="k">核对优先级</div>
+        <div class="v">先发布页，后记录</div>
+        <div class="d">两者不一致时，以最近一次更新记录的时间为判断依据。</div>
+      </div>
+      <div class="card">
+        <div class="k">下载文件</div>
+        <div class="v"><span class="pill pill-wait">待补充</span></div>
+        <div class="d">下载入口暂未开放，开放前按钮保持禁用状态。</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="finder" aria-labelledby="finder-title">
+    <h2 id="finder-title">地址查询与筛选</h2>
+    <p class="sec-note">在下方输入发布页上看到的记录编号或关键词，可快速定位到对应的更新条目说明。查询只在本页内容范围内进行。</p>
+    <div class="finder">
+      <form class="finder-row" id="finder-form" role="search" aria-label="发布页记录查询">
+        <input type="search" id="finder-input" placeholder="例如：A-02、备用、核对、移动端" aria-label="输入记录编号或关键词">
+        <button type="submit">查询</button>
+      </form>
+      <p class="hint">支持记录编号（如 A-01）、场景词（备用、移动端）与核对类关键词。输入为空时展示全部条目。</p>
+      <div id="finder-result" role="status" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="howto" aria-labelledby="howto-title">
+    <h2 id="howto-title">按步骤核对地址线索</h2>
+    <p class="sec-note">秘密研究所最新地址发布页的价值在于可核对。以下四步按顺序执行，能减少把过期线索当成本次地址使用的情况。</p>
+    <div class="steps">
+      <div class="step">
+        <h3>确认本页就是发布页</h3>
+        <p>先确认当前所处的页面标题为“秘密研究所最新地址发布页”，并查看状态区是否显示正常发布。发布页是唯一的信息起点。</p>
+      </div>
+      <div class="step">
+        <h3>比对更新记录时间</h3>
+        <p>在更新记录中找到最近一条条目，核对它的日期与变更说明。时间更近的条目优先于更早条目，不要混用不同批次的信息。</p>
+      </div>
+      <div class="step">
+        <h3>留意条目状态标记</h3>
+        <p>记录中的状态分为“生效”“观察”“归档”。只有标注为生效的条目可作为当前线索使用，观察类条目仅作参考。</p>
+      </div>
+      <div class="step">
+        <h3>异常时回到发布页</h3>
+        <p>若按线索访问出现异常，先回到本发布页复查状态与记录，而不是在外部渠道寻找来源不明的说法。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="record" aria-labelledby="record-title">
+    <h2 id="record-title">发布页更新记录</h2>
+    <p class="sec-note">记录按批次排列，每条保留编号、场景、状态与说明。编号可在上方查询框中直接检索。</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">编号</th>
+            <th scope="col">场景</th>
+            <th scope="col">状态</th>
+            <th scope="col">说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">A-01</td>
+            <td>发布页首页</td>
+            <td><span class="pill pill-ok">生效</span></td>
+            <td>发布页结构与说明栏目整理完成，作为地址核对的主入口。</td>
+          </tr>
+          <tr>
+            <td class="mono">A-02</td>
+            <td>核对方法</td>
+            <td><span class="pill pill-ok">生效</span></td>
+            <td>补充四步核对流程，明确以更新记录时间为优先判断依据。</td>
+          </tr>
+          <tr>
+            <td class="mono">A-03</td>
+            <td>移动端阅读</td>
+            <td><span class="pill pill-ok">生效</span></td>
+            <td>调整小屏字号、行长与卡片排列，手机上优先展示主题文字。</td>
+          </tr>
+          <tr>
+            <td class="mono">A-04</td>
+            <td>备用线索</td>
+            <td><span class="pill pill-wait">观察</span></td>
+            <td>备用渠道的表述统一为“备用线索”，具体内容待后续批次补充。</td>
+          </tr>
+          <tr>
+            <td class="mono">A-05</td>
+            <td>下载文件</td>
+            <td><span class="pill pill-wait">待补充</span></td>
+            <td>下载入口暂未开放，开放前保持禁用，避免误点。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="tips-title">
+    <h2 id="tips-title">使用发布页时的三条要点</h2>
+    <p class="sec-note">这些要点来自发布页的维护口径，帮助区分“可核对的信息”与“无法核实的说法”。</p>
+    <div class="grid">
+      <div class="card">
+        <h3><span class="dot"></span>只认发布页来源</h3>
+        <p>秘密研究所最新地址发布页只在本页与更新记录中给出线索。任何自称“内部地址”的转述，都无法与本页记录对应，建议直接忽略。</p>
+      </div>
+      <div class="card">
+        <h3><span class="dot"></span>时间比措辞重要</h3>
+        <p>同一场景出现多条说明时，以时间更近的条目为准。措辞再确定的旧条目，也不能覆盖新批次的记录。</p>
+      </div>
+      <div class="card">
+        <h3><span class="dot amber"></span>状态标记先看</h3>
+        <p>观察与待补充的条目仅供参考，不作为访问依据。把状态标记放在第一位，能避免多数误用情况。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">常见问题</h2>
+    <p class="sec-note">围绕秘密研究所最新地址发布页的高频疑问，答案以本页可见内容为限。</p>
+    <details>
+      <summary>发布页和地址本身是什么关系？</summary>
+      <p>发布页负责说明与记录，地址线索由更新记录承载。发布页不会脱离记录单独给出线索，因此核对时应同时看状态区与记录表。</p>
+    </details>
+    <details>
+      <summary>为什么有些条目显示“观察”？</summary>
+      <p>观察表示该条目的表述已统一，但具体内容仍待后续批次补充。它属于过程状态，不构成可使用的线索。</p>
+    </details>
+    <details>
+      <summary>查询框搜不到结果怎么办？</summary>
+      <p>先尝试记录编号（如 A-02）或场景词（备用、移动端、核对）。若仍无结果，说明该关键词不在当前记录范围内，可清空输入查看全部条目。</p>
+    </details>
+    <details>
+      <summary>移动端访问发布页有区别吗？</summary>
+      <p>没有内容差异。小屏下导航可横向滚动，记录表可左右滑动查看，字号与行长已按手机阅读调整，首屏优先展示主题文字。</p>
+    </details>
+  </section>
+
+  <section aria-labelledby="dl-title">
+    <div class="download">
+      <div class="txt">
+        <h2 id="dl-title">发布页信息整理文件</h2>
+        <p>将本页状态说明与更新记录整理为可离线查看的文件，便于对照核对。当前下载入口尚未开放，开放后将在此处提供。</p>
+      </div>
+      <a class="btn-disabled" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <div class="f-brand">秘密研究所最新地址发布页</div>
+        <div>地址发布与核对指引，信息以本页更新记录为准。</div>
+      </div>
+      <nav aria-label="页尾导航">
+        <a href="#status">发布页状态</a>
+        <a href="#finder">地址查询</a>
+        <a href="#howto">核对方法</a>
+        <a href="#record">更新记录</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+    </div>
+    <div class="f-bottom">
+      本站为秘密研究所最新地址发布页，用于集中说明地址发布页的用途、核对步骤与更新记录。<br>
+      页面内容随批次更新调整；下载入口开放前保持禁用。请以本页可见信息作为判断依据。
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var records = [
+    {id:"A-01", scene:"发布页首页", status:"生效", desc:"发布页结构与说明栏目整理完成，作为地址核对的主入口。", keys:"a-01 首页 发布页 入口"},
+    {id:"A-02", scene:"核对方法", status:"生效", desc:"补充四步核对流程，明确以更新记录时间为优先判断依据。", keys:"a-02 核对 方法 步骤 流程"},
+    {id:"A-03", scene:"移动端阅读", status:"生效", desc:"调整小屏字号、行长与卡片排列，手机上优先展示主题文字。", keys:"a-03 移动端 手机 小屏 阅读"},
+    {id:"A-04", scene:"备用线索", status:"观察", desc:"备用渠道的表述统一为“备用线索”，具体内容待后续批次补充。", keys:"a-04 备用 线索 观察"},
+    {id:"A-05", scene:"下载文件", status:"待补充", desc:"下载入口暂未开放，开放前保持禁用，避免误点。", keys:"a-05 下载 文件 待补充"}
+  ];
+  var form = document.getElementById("finder-form");
+  var input = document.getElementById("finder-input");
+  var out = document.getElementById("finder-result");
+
+  function esc(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
+    });
+  }
+
+  function render(q){
+    q = (q || "").trim().toLowerCase();
+    var list = records.filter(function(r){
+      if(!q) return true;
+      return (r.id + " " + r.scene + " " + r.status + " " + r.desc + " " + r.keys).toLowerCase().indexOf(q) !== -1;
+    });
+    out.classList.add("show");
+    if(list.length === 0){
+      out.innerHTML = '<span class="none">未找到匹配条目。可尝试编号（如 A-02）或场景词（备用、移动端）。</span>';
+      return;
+    }
+    var html = "共找到 " + list.length + " 条记录：<br>";
+    list.forEach(function(r){
+      html += "· <strong>" + esc(r.id) + "</strong>（" + esc(r.scene) + "，状态：" + esc(r.status) + "）—— " + esc(r.desc) + "<br>";
+    });
+    out.innerHTML = html;
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    render(input.value);
+  });
+  input.addEventListener("input", function(){
+    if(input.value.trim() === ""){ out.classList.remove("show"); out.innerHTML = ""; }
+  });
+})();
+</script>
+</body>
+</html>
