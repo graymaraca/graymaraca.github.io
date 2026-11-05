@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日大赛视频在线观看-每日大赛视频在线观看高清回放_比赛视频免费观看入口</title>
+<meta name="description" content="每日大赛视频在线观看页面汇集每日赛事视频的在线观看入口、赛程看点与回放说明，帮助观众快速找到每日大赛视频在线观看的高清播放与免费观看入口，按日期和项目分类浏览。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111a2b'/%3E%3Cpath d='M26 20l20 12-20 12z' fill='%23ffb547'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0d1220;
+  --bg-soft:#141c2e;
+  --card:#182136;
+  --line:rgba(255,255,255,.09);
+  --text:#eef2f9;
+  --muted:#a3aec4;
+  --accent:#ffb547;
+  --accent-2:#4fd1c5;
+  --radius:14px;
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* header */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(13,18,32,.88);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;align-items:center;gap:24px;
+  min-height:64px;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  font-weight:700;font-size:15px;letter-spacing:.2px;
+  white-space:nowrap;
+}
+.logo .mark{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(140deg,#1f2a44,#0d1220);
+  border:1px solid var(--line);
+  display:grid;place-items:center;flex:none;
+}
+.nav ul{
+  display:flex;gap:22px;list-style:none;
+  font-size:14px;color:var(--muted);
+  margin-left:auto;
+}
+.nav ul a{padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+.nav ul a:hover{color:var(--text);border-color:var(--accent)}
+.nav .cta{
+  font-size:13px;font-weight:600;color:#111a2b;
+  background:var(--accent);
+  padding:8px 16px;border-radius:999px;
+  white-space:nowrap;
+}
+.nav .cta:hover{filter:brightness(1.06)}
+
+/* hero */
+.hero{
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(700px 320px at 85% -10%,rgba(255,181,71,.10),transparent 70%),
+    radial-gradient(600px 300px at 5% 0%,rgba(79,209,197,.08),transparent 70%);
+}
+.hero-inner{
+  display:grid;grid-template-columns:1.35fr .8fr;gap:44px;
+  align-items:center;padding:56px 0 52px;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;color:var(--accent-2);
+  border:1px solid rgba(79,209,197,.35);
+  border-radius:999px;padding:4px 12px;margin-bottom:18px;
+}
+h1{
+  font-size:clamp(26px,4vw,40px);
+  line-height:1.28;font-weight:800;letter-spacing:.3px;
+}
+.hero p.lead{
+  margin-top:16px;color:var(--muted);font-size:15.5px;max-width:560px;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14px;font-weight:600;border-radius:10px;
+  padding:11px 20px;transition:.2s;
+}
+.btn-primary{background:var(--accent);color:#111a2b}
+.btn-primary:hover{filter:brightness(1.07)}
+.btn-ghost{border:1px solid var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--accent)}
+.btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
+.poster{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:18px;
+}
+.poster .screen{
+  aspect-ratio:16/10;border-radius:10px;
+  background:linear-gradient(150deg,#1d2740,#0e1526);
+  display:grid;place-items:center;position:relative;overflow:hidden;
+}
+.poster .screen svg{width:56px;height:56px}
+.poster .meta{
+  display:flex;justify-content:space-between;gap:10px;
+  font-size:12.5px;color:var(--muted);margin-top:14px;
+}
+.poster .meta b{color:var(--text);font-weight:600}
+
+/* section base */
+section{padding:52px 0}
+.sec-head{max-width:720px;margin-bottom:26px}
+.sec-head h2{
+  font-size:clamp(20px,2.6vw,26px);font-weight:700;letter-spacing:.2px;
+}
+.sec-head p{color:var(--muted);font-size:14.5px;margin-top:10px}
+.kicker{
+  font-size:12.5px;letter-spacing:2px;color:var(--accent);
+  text-transform:uppercase;margin-bottom:8px;font-weight:600;
+}
+
+/* cards */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.card h3{font-size:16px;font-weight:700}
+.card p{font-size:14px;color:var(--muted)}
+.card .tag{
+  font-size:12px;color:var(--accent-2);
+  border:1px solid rgba(79,209,197,.3);
+  border-radius:6px;padding:1px 8px;align-self:flex-start;
+}
+.card .icon{width:30px;height:30px;color:var(--accent)}
+
+/* filter bar */
+.filters{
+  display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;
+}
+.chip{
+  font-size:13px;padding:7px 15px;border-radius:999px;
+  border:1px solid var(--line);color:var(--muted);
+  background:transparent;cursor:pointer;transition:.2s;
+  font-family:inherit;
+}
+.chip:hover{color:var(--text);border-color:var(--accent)}
+.chip.active{background:var(--accent);color:#111a2b;border-color:var(--accent);font-weight:600}
+#searchBox{
+  flex:1;min-width:180px;
+  background:var(--bg-soft);border:1px solid var(--line);
+  border-radius:999px;padding:8px 16px;color:var(--text);
+  font-size:13.5px;font-family:inherit;outline:none;
+}
+#searchBox:focus{border-color:var(--accent)}
+.empty{
+  display:none;font-size:14px;color:var(--muted);
+  padding:28px;text-align:center;border:1px dashed var(--line);
+  border-radius:var(--radius);
+}
+
+/* schedule list */
+.list{display:flex;flex-direction:column;gap:12px}
+.item{
+  display:grid;grid-template-columns:96px 1fr auto;gap:18px;
+  align-items:center;
+  background:var(--bg-soft);border:1px solid var(--line);
+  border-radius:12px;padding:16px 20px;transition:.2s;
+}
+.item:hover{border-color:rgba(255,181,71,.45)}
+.item .date{
+  font-size:13px;color:var(--accent);font-weight:600;
+  border-right:1px solid var(--line);padding-right:14px;
+}
+.item .info h4{font-size:15px;font-weight:600;margin-bottom:4px}
+.item .info p{font-size:13px;color:var(--muted)}
+.item .state{
+  font-size:12.5px;color:var(--muted);
+  border:1px solid var(--line);border-radius:6px;
+  padding:3px 10px;white-space:nowrap;
+}
+.item .state.live{color:var(--accent);border-color:rgba(255,181,71,.5)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.step{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:24px;position:relative;
+}
+.step::before{
+  counter-increment:s;content:"0" counter(s);
+  font-size:13px;font-weight:700;color:var(--accent);
+  display:block;margin-bottom:10px;letter-spacing:1px;
+}
+.step h3{font-size:15.5px;margin-bottom:8px}
+.step p{font-size:13.5px;color:var(--muted)}
+
+/* note panel */
+.panel{
+  background:linear-gradient(160deg,#1a2338,#111828);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:32px;display:grid;grid-template-columns:1.4fr .9fr;gap:32px;
+  align-items:center;
+}
+.panel h2{font-size:22px;margin-bottom:12px}
+.panel p{font-size:14px;color:var(--muted);margin-bottom:10px}
+.panel .facts{display:flex;flex-direction:column;gap:14px}
+.fact{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:13.5px;border-bottom:1px dashed var(--line);
+  padding-bottom:12px;color:var(--muted);
+}
+.fact b{color:var(--text);font-weight:600}
+
+/* faq */
+.faq details{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:16px 20px;margin-bottom:12px;
+}
+.faq summary{
+  cursor:pointer;font-size:15px;font-weight:600;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-weight:700}
+.faq details[open] summary::after{content:"−"}
+.faq p{font-size:14px;color:var(--muted);margin-top:12px}
+
+/* footer */
+footer.site{
+  border-top:1px solid var(--line);
+  padding:36px 0 44px;background:#0a0f1b;
+}
+.foot{
+  display:flex;flex-wrap:wrap;justify-content:space-between;
+  gap:24px;align-items:flex-start;
+}
+.foot .brand{font-size:14px;font-weight:700;margin-bottom:8px}
+.foot p{font-size:13px;color:var(--muted);max-width:430px}
+.foot-links{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:var(--muted)}
+.foot-links a:hover{color:var(--accent)}
+.copy{
+  font-size:12.5px;color:#6b768c;margin-top:26px;
+  border-top:1px solid var(--line);padding-top:18px;
+}
+
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:30px;padding:40px 0}
+  .grid-3{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .panel{grid-template-columns:1fr;padding:24px}
+  .nav ul{display:none}
+  .nav{gap:12px}
+  .nav .cta{margin-left:auto}
+  .item{grid-template-columns:1fr;gap:8px}
+  .item .date{border-right:0;border-bottom:1px solid var(--line);padding:0 0 6px}
+  .item .state{justify-self:start}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="logo" href="#top">
+      <span class="mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l10 6-10 6z" fill="#ffb547"/></svg>
+      </span>
+      <span>每日大赛视频在线观看</span>
+    </a>
+    <ul>
+      <li><a href="#today">今日赛程</a></li>
+      <li><a href="#watch">观看入口</a></li>
+      <li><a href="#guide">观看指南</a></li>
+      <li><a href="#faq">常见问题</a></li>
+    </ul>
+    <a class="cta" href="#watch">在线观看</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#4fd1c5" stroke-width="2"/><path d="M10 8l6 4-6 4z" fill="#4fd1c5"/></svg>
+          每日更新 · 赛事视频聚合
+        </span>
+        <h1>每日大赛视频在线观看</h1>
+        <p class="lead">每天开赛的各类大赛视频集中在这里，按日期、项目与赛程节点整理，打开页面即可找到每日大赛视频在线观看的播放位置。无需跳转多个页面，先在列表里确认场次，再进入观看入口。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#watch">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 6l10 6-10 6z" fill="#111a2b"/></svg>
+            进入观看入口
+          </a>
+          <a class="btn btn-ghost" href="#today">查看今日赛程</a>
+          <a class="btn btn-ghost" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+      </div>
+      <aside class="poster" aria-label="播放预览">
+        <div class="screen">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="rgba(255,181,71,.55)" stroke-width="1.2"/><path d="M9.5 8l7 4-7 4z" fill="#ffb547"/></svg>
+        </div>
+        <div class="meta">
+          <span>当前状态 <b>可回看</b></span>
+          <span>画质 <b>高清</b></span>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 今日赛程 -->
+  <section id="today">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Today</div>
+        <h2>今日赛程与场次安排</h2>
+        <p>每日大赛视频在线观看的核心是“当天有哪些场次”。下表按开赛顺序列出当日主要项目，点击可定位到对应观看入口；已结束的场次保留回看说明。</p>
+      </div>
+      <div class="list">
+        <div class="item">
+          <div class="date">今日 · 上午场</div>
+          <div class="info">
+            <h4>小组循环赛 · 首轮</h4>
+            <p>按日程开赛，赛后提供整场回放，适合错过直播的观众补看。</p>
+          </div>
+          <span class="state">已结束 · 可回看</span>
+        </div>
+        <div class="item">
+          <div class="date">今日 · 下午场</div>
+          <div class="info">
+            <h4>淘汰赛 · 晋级轮</h4>
+            <p>当日焦点场次，赛前公布对阵信息，赛后同步精彩片段。</p>
+          </div>
+          <span class="state live">进行中</span>
+        </div>
+        <div class="item">
+          <div class="date">今日 · 晚间场</div>
+          <div class="info">
+            <h4>决赛 · 冠军争夺</h4>
+            <p>当日收官场次，观看入口与回看入口在赛程列表中一并给出。</p>
+          </div>
+          <span class="state">未开始</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 观看入口 -->
+  <section id="watch">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Watch</div>
+        <h2>每日大赛视频在线观看入口</h2>
+        <p>按项目与赛程类型筛选当日可视内容。输入项目名或关键词可快速定位，列表只展示已整理好的场次信息，点击进入对应的每日大赛视频在线观看页面。</p>
+      </div>
+      <div class="filters">
+        <input id="searchBox" type="search" placeholder="搜索项目或场次，例如：决赛" aria-label="搜索场次">
+        <button class="chip active" data-filter="all" type="button">全部</button>
+        <button class="chip" data-filter="group" type="button">循环赛</button>
+        <button class="chip" data-filter="knock" type="button">淘汰赛</button>
+        <button class="chip" data-filter="final" type="button">决赛</button>
+      </div>
+      <div class="grid-3" id="watchGrid">
+        <article class="card" data-cat="group" data-name="小组循环赛 首轮">
+          <span class="tag">循环赛</span>
+          <h3>小组循环赛首轮 · 整场回放</h3>
+          <p>完整比赛录像，包含赛前介绍与赛后采访片段，适合系统回顾当日赛况。</p>
+          <a class="btn btn-ghost" href="#top">进入观看</a>
+        </article>
+        <article class="card" data-cat="knock" data-name="淘汰赛 晋级轮">
+          <span class="tag">淘汰赛</span>
+          <h3>淘汰赛晋级轮 · 直播与回看</h3>
+          <p>当日焦点对阵，直播结束后自动转为回看，页面保留精彩片段索引。</p>
+          <a class="btn btn-ghost" href="#top">进入观看</a>
+        </article>
+        <article class="card" data-cat="final" data-name="决赛 冠军争夺">
+          <span class="tag">决赛</span>
+          <h3>决赛冠军争夺 · 高清入口</h3>
+          <p>当日收官场次，提供高清播放与赛后集锦两个观看方向，便于快速定位。</p>
+          <a class="btn btn-ghost" href="#top">进入观看</a>
+        </article>
+        <article class="card" data-cat="group" data-name="循环赛 次轮">
+          <span class="tag">循环赛</span>
+          <h3>循环赛次轮 · 精彩片段</h3>
+          <p>剪辑后的关键得分与转折片段，适合时间有限、想快速了解赛果的观众。</p>
+          <a class="btn btn-ghost" href="#top">进入观看</a>
+        </article>
+        <article class="card" data-cat="knock" data-name="淘汰赛 半决赛">
+          <span class="tag">淘汰赛</span>
+          <h3>淘汰赛半决赛 · 全场回看</h3>
+          <p>按时间轴整理的完整回看，赛后补充对阵数据与赛况摘要。</p>
+          <a class="btn btn-ghost" href="#top">进入观看</a>
+        </article>
+        <article class="card" data-cat="final" data-name="决赛 颁奖与集锦">
+          <span class="tag">决赛</span>
+          <h3>决赛颁奖与集锦 · 赛后内容</h3>
+          <p>颁奖环节与当日最佳镜头合集，帮助观众补齐决赛的完整叙事。</p>
+          <a class="btn btn-ghost" href="#top">进入观看</a>
+        </article>
+      </div>
+      <div class="empty" id="emptyTip">没有匹配的场次，请更换关键词或选择“全部”。</div>
+    </div>
+  </section>
+
+  <!-- 观看指南 -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Guide</div>
+        <h2>三步找到要看的场次</h2>
+        <p>每日大赛视频在线观看的路径并不复杂，先确认时间，再确认项目，最后进入播放位置。下面三步对应页面上的三个操作区域。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>确认当日赛程</h3>
+          <p>在“今日赛程”中查看上午场、下午场与晚间场的开赛状态，已结束的场次可直接走回看流程，未开始的场次先记下时间。</p>
+        </div>
+        <div class="step">
+          <h3>筛选项目类型</h3>
+          <p>在观看入口使用筛选按钮或搜索框，按循环赛、淘汰赛、决赛缩小范围，避免在大量场次中逐条翻找。</p>
+        </div>
+        <div class="step">
+          <h3>进入播放位置</h3>
+          <p>点击卡片中的入口按钮进入对应观看页，直播场次看实时画面，已结束场次看整场回放或精彩片段。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 说明面板 -->
+  <section>
+    <div class="wrap">
+      <div class="panel">
+        <div>
+          <h2>关于每日大赛视频在线观看的内容说明</h2>
+          <p>本页面围绕每日开赛的大赛视频做信息整理，内容以赛程列表、场次状态与观看入口为主，不存储、不转播比赛画面，播放能力由对应入口提供。</p>
+          <p>每日大赛视频在线观看的场次会随赛程推进更新：开赛前补充对阵信息，比赛结束后补充回看与集锦入口。若某场次的观看入口暂未就绪，页面会给出明确状态提示，避免误点。</p>
+          <p>对于需要批量保存赛程的观众，可先使用页面顶部的下载按钮获取赛程文件；该入口目前处于占位状态，正式地址上线后替换即可使用。</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><span>更新频率</span><b>按日更新</b></div>
+          <div class="fact"><span>场次状态</span><b>未开始 / 进行中 / 已结束</b></div>
+          <div class="fact"><span>内容形式</span><b>直播 · 回放 · 集锦</b></div>
+          <div class="fact"><span>观看方式</span><b>网页在线观看</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">FAQ</div>
+        <h2>常见问题</h2>
+        <p>这些问题来自观众在查找每日大赛视频在线观看时最常遇到的几种情况，回答只涉及本页面的信息组织方式。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>错过直播还能看吗？</summary>
+          <p>可以。赛程列表中标记为“已结束 · 可回看”的场次，会在比赛结束后转为回看，观看入口与直播入口位于同一卡片内，点击即可切换。</p>
+        </details>
+        <details>
+          <summary>为什么有的场次显示“未开始”？</summary>
+          <p>表示该场次尚未到开赛时间。此时可以先记录时间，或使用搜索框按项目名定位，待开赛后再回到本页进入每日大赛视频在线观看入口。</p>
+        </details>
+        <details>
+          <summary>如何快速找到决赛视频？</summary>
+          <p>在观看入口点击“决赛”筛选按钮，或在搜索框输入“决赛”，列表只保留决赛相关场次，包含冠军争夺与颁奖集锦两类内容。</p>
+        </details>
+        <details>
+          <summary>下载按钮为什么不能点击？</summary>
+          <p>该按钮用于下载赛程文件，目前为占位状态，正式下载地址尚未接入，因此保持禁用显示，避免产生无效跳转。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand">每日大赛视频在线观看</div>
+        <p>每日大赛视频在线观看主题首页，整理当日赛程、场次状态与观看入口，帮助观众按时间和项目快速定位比赛视频。</p>
+      </div>
+      <nav class="foot-links" aria-label="页尾导航">
+        <a href="#today">今日赛程</a>
+        <a href="#watch">观看入口</a>
+        <a href="#guide">观看指南</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+    </div>
+    <div class="copy">© 2024 每日大赛视频在线观看 · 页面内容为赛程与入口信息整理，比赛画面由对应播放入口提供。</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var chips = document.querySelectorAll('.chip');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#watchGrid .card'));
+  var box = document.getElementById('searchBox');
+  var empty = document.getElementById('emptyTip');
+  var activeFilter = 'all';
+
+  function apply(){
+    var kw = (box.value || '').trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(c){
+      var okCat = activeFilter === 'all' || c.getAttribute('data-cat') === activeFilter;
+      var name = (c.getAttribute('data-name') || '') + ' ' + c.textContent;
+      var okKw = !kw || name.toLowerCase().indexOf(kw) !== -1;
+      var show = okCat && okKw;
+      c.style.display = show ? '' : 'none';
+      if(show) shown++;
+    });
+    empty.style.display = shown ? 'none' : 'block';
+  }
+
+  chips.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      chips.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeFilter = btn.getAttribute('data-filter');
+      apply();
+    });
+  });
+
+  box.addEventListener('input', apply);
+})();
+</script>
+</body>
+</html>
